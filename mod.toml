@@ -8,18 +8,19 @@
 id = "mm_recomp_deku_hop_min_speed"
 
 # Version of this mod.
-version = "0.0.1"
+version = "1.0.0"
 
 # The name that will show up for this mod in the mod menu. This should be human readable.
 display_name = "Deku Hop Minimum Speed"
 
 # The description that will show up when this mod is displayed in the mod menu. This should be human readable.
 description =  """
-Dev Build"""
+Set the minimum movement speed for the Deku Scrubs first hop. No more slow hops because you didn't have a run-up.
+You can customise the minimum speed between 0 and 10. 0 is vanilla behaviour, 6 is the Deku Scrubs max walk speed."""
 
 # A short description that will show up in this mod's entry in the mod list. This should be human readable and kept short
 # to prevent it from being cut off due to the limited space.
-short_description = "Dev Build"
+short_description = "Set the minimum movement speed for the Deku Scrubs first hop."
 
 # Authors of this mod.
 authors = [ "Keanine" ]
@@ -56,16 +57,18 @@ func_reference_syms_file = "Zelda64RecompSyms/mm.us.rev1.syms.toml"
 data_reference_syms_files = [ "Zelda64RecompSyms/mm.us.rev1.datasyms.toml", "Zelda64RecompSyms/mm.us.rev1.datasyms_static.toml" ]
 
 # Additional files to include in the mod.
-additional_files = [ ]
+additional_files = [ 
+    "thumb.dds"
+]
 
 [[manifest.config_options]]
-id = "number_option"
-name = "Number Option"
-description = "Test number config option."
+id = "min_speed"
+name = "Minimum Hop Speed"
+description = "Default run speed is 6.0."
 type = "Number"
 min = 0
 max = 10
 step = 0.1
 precision = 1
 percent = false
-default = 1
+default = 6.0
